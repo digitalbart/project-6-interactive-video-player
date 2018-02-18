@@ -12,6 +12,3 @@
 
 # Mockup - Tablet / Desktop
 ![Desktop](https://github.com/digitalbart/project-6-interactive-video-player/blob/master/mockups/tablet-desktop.png)
-
-
-
