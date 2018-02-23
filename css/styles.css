@@ -1,0 +1,120 @@
+/* Global Layout Set-up */
+* { 
+  box-sizing: border-box;
+}
+  
+body {
+  background: #f7f5f0;
+  color: #222;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+.col,
+.wrapper, 
+.col-half {
+  width: 100%;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* Link Styles */
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #222;
+}
+a:hover {
+  color: #6633ff;
+}
+
+/* header styles */
+
+header {
+  padding: 0 16px;  
+}
+
+
+/* main styles */
+
+main {
+  background-color: white;
+  padding: 16px;
+  color: #b2b0b0;
+}
+
+.video__wrapper {
+  margin: 0 auto;
+  display: block;
+}
+
+.video__wrapper {
+  width: 1280px;
+}
+
+h1,
+h2,
+h3 {
+  color: #222;  
+}
+
+h1 {
+  font-size: 32px;
+  color: #36ACD0;
+}
+
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+
+/* footer styles */
+
+
+
+
+.wrapper,
+.clearfix {
+  clear: both;
+  display: table;
+}
+
+/* Styles for the tablet screens */
+
+@media screen and (min-width: 768px) {
+
+  .col,
+  .col-half {
+    width: 50%;
+    padding: 0 2%;
+    float: left;
+  }
+
+  .col:nth-of-type(2)
+  .col-half:nth-of-type(2) {
+    clear: both;
+    display: table;  
+  }
+
+  
+
+} 
+
+/* Styles for the desktop screens & beyond */
+
+
+@media screen and (min-width: 1024px) {
+
+
+}
+
