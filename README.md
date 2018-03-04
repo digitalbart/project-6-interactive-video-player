@@ -6,6 +6,7 @@
 - Use a mobile first styling approach
 - Style the page to roughly match the mockups for mobile and tablet-desktop as guides.
 
+
 # Mockup - Mobile
 ![mobile](https://github.com/digitalbart/project-6-interactive-video-player/blob/master/mockups/mobile.png)
 
