@@ -1,126 +1,169 @@
-/* Global Layout Set-up */
-* { 
+/* Main styles */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&Roboto:300');
+
+/* Variables */
+
+:root {
+  --color-win: #78CF82;
+  --color-lose: #D94545;
+  --color-start: #5b85b7;
+  --color-neutral: #445069;
+  --color-neutral-light: #D2D2D2;
+  --color-keys: #37474F;
+  --color-keys-light: #E5E5E5;
+  --font-size-large: 60px;
+  --font-size-medium: 20px;
+  --transition: all .2s ease-in-out;
+}
+
+/* main */
+
+* {
   box-sizing: border-box;
 }
-  
+
 body {
-  background: #fff;
-  color: #222;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 200;
-  margin: 0;
+  justify-content: space-evenly;
+  flex-direction: column;
+  display: flex;
+  height: 100vh;
+}
+
+li, ol, ul {
   padding: 0;
-  line-height: 1.5em;
+  display: inline-block;
 }
 
-img {
-  width: 100%;
-}
-
-.col,
-.wrapper, 
-.col-half {
-  width: 100%;
-}
-
-strong {
-  font-weight: 700;
-}
-
-/* Link Styles */
-
-a {
-  text-decoration: none;
+h2 {
+  margin: 0;
   text-transform: uppercase;
-  color: #222;
-}
-a:hover {
-  color: #6633ff;
-}
-
-/* header styles */
-header {
-  padding: 0 16px;  
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--font-size-large);
+  margin: 0;
 }
 
+button {
+  margin: 6px;
+  border: 1px solid transparent;
+  padding: .5rem 1rem;
+  color: var(--color-keys);
+  font-size: var(--font-size-medium);
+  background-color: var(--color-keys-light);
+  border-radius: 5px;
+  -webkit-transition: var(--transition);
+  -o-transition: var(--transition);
+  transition: var(--transition);
+}
 
-/* main styles */
-main {
-  background-color: white;
-  padding: 16px;
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  max-height: 900px;
+  text-align: center;
+}
+
+.section {
+  width: 100%;
+  padding: 10px;
+}
+
+/* Title */
+
+.header {
+  color: var(--color-start);
+}
+
+/* Scoreboard */
+
+.tries {
+  background-image: url('/liveHeart.png');
+}
+
+/* Phrase */
+
+.letter {
+  font-size: var(--font-size-medium);
+  height: 65px;
+  width: 65px;
+  padding: 20px 1px 0 1px;
+  margin-right: 2px;
+  color: transparent;
+  background: var(--color-neutral-light);
+  border-radius: 5px;
+}
+
+.space {
+  width: 15px;
+}
+
+.show {
   color: #000;
-  font-weight: 500;
-  max-width: 1280px;
-  margin: 0 auto;
+  background-color: #76CE82;
 }
 
-.video__wrapper {
-  margin: 0 auto;
-  display: block;
+/* Keyboard */
+
+.keyrow {
+  display: flex;
+  justify-content: center;
 }
 
-.captions span {
-  cursor: pointer;
+.chosen {
+  background: var(--color-neutral);
+  border-radius: 5px;
+  font-size: var(--font-size-medium);
+  color: #FFFFFF;
 }
 
-/** custom player styles **/
-.mejs__container .mejs__inner .mejs__controls {
-  background-color: black;
+.btn__reset {
+  padding: 8px;
+  margin: 50px auto;
+  background: #FFFFFF;
+  border-radius: 5px;
+  font-size: var(--font-size-medium);
 }
 
-.mejs__overlay.mejs__layer.mejs__overlay-play {
-  background-color: orange;
+/* Overlay */
+
+#overlay {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  color: #FFFFFF;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
 }
 
-h1,
-h2,
-h3 {
-  color: #222;  
+.title {
+  color: #FFF;
 }
 
-h1 {
-  font-size: 32px;
-  color: #36ACD0;
+.start {
+  background-color: var(--color-start);
 }
 
-h3 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 400;
+.start a {
+  color: var(--color-win);
 }
 
-.active {
-  color: orange;
-  font-weight: 500;
+.win {
+  background-color: var(--color-win);
 }
 
-/* footer styles */
-.wrapper,
-.clearfix {
-  clear: both;
-  display: table;
+.win a {
+  color: var(--color-win);
 }
 
-/* Styles for the tablet screens */
-@media screen and (min-width: 768px) {
-
-  .col,
-  .col-half {
-    width: 50%;
-    padding: 0 2%;
-    float: left;
-  }
-
-  .col:nth-of-type(2)
-  .col-half:nth-of-type(2) {
-    clear: both;
-    display: table;  
-  }
-  
-
-} 
-
-/* Styles for the desktop screens & beyond */
-@media screen and (min-width: 1024px) {
-
+.lose {
+  background-color: var(--color-lose);
 }
 
+.lose a {
+  color: var(--color-lose);
+}
